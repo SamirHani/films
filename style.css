@@ -239,6 +239,7 @@ img {
 
   .title {
     font-size: 14px; /* Further reduce font size */
+    overflow: hidden;
   }
 
   .vote {
