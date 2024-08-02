@@ -221,8 +221,14 @@ img {
 }
 
 @media (max-width: 480px) {
+  #films {
+    margin-top: 15px;
+    padding: 15px;
+    justify-content: space-around;
+
+  }
   .film {
-    width: 120px; /* Further reduce width for mobile phones */
+    width: 150px; /* Further reduce width for mobile phones */
     margin: 5px; /* Adjust margin */
   }
 
