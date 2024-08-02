@@ -9,7 +9,7 @@ html {
   font-weight: bold;
   font-size: 20px;
 }
-header {
+header, footer {
   background-color: rgb(3, 37, 65);
   width: 100%;
   position: relative;
@@ -185,4 +185,17 @@ img {
     left: 6px;
     top: -10px;
   }
+}
+footer {
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+footer span {
+  color: rgb(70, 176, 224);
+  font-size: 25px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 10px;
 }
