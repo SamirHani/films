@@ -12,32 +12,10 @@ html {
 header {
   background-color: rgb(3, 37, 65);
   width: 100%;
-  padding: 10px;
-  /* display: flex; */
-  /* justify-content: space-around; */
-  /* align-items: center; */
   position: relative;
-  /* z-index: 100; */
   color: white;
   height: 60px;
 }
-
-/* h1 {
-  font-size: 40px;
-  margin-left: 10px;
-  background: linear-gradient(45deg, #d3f800, #257db1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.links span {
-  padding: 10px;
-  display: inline-block;
-  color: rgb(77, 96, 182);
-} */
-
-/*________________________________________________________________________________*/
-
-/* Base styles */
 h1 {
   font-size: 40px;
   margin-left: 10px;
@@ -50,8 +28,8 @@ h1 {
 }
 
 header .links {
-  display: flex; /* Ensure links are displayed horizontally */
-  gap: 10px; /* Add spacing between links */
+  display: flex;
+  gap: 10px; 
   position: absolute;
   right: 30px;
 }
@@ -61,39 +39,36 @@ header .links {
   color: rgb(255, 255, 255);
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
   h1 {
-    font-size: 30px; /* Smaller font size for tablets and smaller screens */
+    font-size: 30px; 
   }
-
   header .links {
-    margin-left: 0; /* Remove large margin on smaller screens */
-    justify-content: center; /* Center align links horizontally */
+    margin-left: 0; 
+    justify-content: center;
   }
 
   .links span {
-    font-size: 14px; /* Smaller text size for links */
-    padding: 8px; /* Adjust padding for smaller screens */
+    font-size: 14px; 
+    padding: 8px; 
   }
 }
 
 @media (max-width: 480px) {
 
   h1 {
-    font-size: 24px; /* Further reduce font size for very small screens */
+    font-size: 24px;
     left: 10px
   }
   header .links {
     gap: 3px;
   }
   .links span {
-    font-size: 12px; /* Further reduce font size of links */
-    padding: 5px; /* Adjust padding for very small screens */
+    font-size: 12px; 
+    padding: 5px;
     right: 10px;
   }
 }
-/*________________________________________________________________________________*/
 
 #films {
   display: flex;
@@ -109,55 +84,9 @@ img {
   border-radius: 10px 10px 0 0;
 }
 
-/* .film {
-  background-color: rgb(240, 240, 240);
-  width: 170px;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-  border-radius: 10px;
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
-}
-.text {
-  position: relative;
-  padding: 10px 30px 20px 20px;
-  width: 100%;
-  height: 150px;
-}
-.title {
-  padding-top: 30px;
-  font-size: 18px;
-}
-.title:hover {
-  color: rgb(16, 147, 199);
-}
-.vote {
-  color: white;
-  text-align: left;
-  background-color: black;
-  border-radius: 5px;
-  padding: 10px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  place-content: center;
-  display: grid;
-  position: absolute;
-  left: 10px;
-  top: -20px;
-  font-size: 14px;
-  font-size: bolder;
-} */
-
-/*------------------------------------------------------------------*/
-
-/* Base styles for the card */
 .film {
   background-color: rgb(240, 240, 240);
-  width: 170px; /* Default width */
+  width: 170px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -202,29 +131,28 @@ img {
   font-weight: bolder;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
   .film {
-    width: 150px; /* Smaller width for tablets */
-    margin: 5px; /* Adjust margin for tablets */
+    width: 150px;
+    margin: 5px; 
   }
 
   .text {
-    padding: 10px 20px 15px 15px; /* Adjust padding */
-    height: 120px; /* Smaller height */
+    padding: 10px 20px 15px 15px; 
+    height: 120px; 
   }
 
   .title {
-    font-size: 16px; /* Smaller font size */
+    font-size: 16px; 
     overflow: hidden;
   }
 
   .vote {
-    width: 35px; /* Smaller width */
-    height: 35px; /* Smaller height */
-    font-size: 12px; /* Smaller font size */
-    left: 8px; /* Adjust position */
-    top: -15px; /* Adjust position */
+    width: 35px; 
+    height: 35px; 
+    font-size: 12px;
+    left: 8px;
+    top: -15px; 
   }
 }
 
@@ -235,25 +163,25 @@ img {
     justify-content: space-around;
   }
   .film {
-    width: 150px; /* Further reduce width for mobile phones */
-    margin: 5px; /* Adjust margin */
+    width: 150px; 
+    margin: 5px; 
   }
 
   .text {
-    padding: 8px 15px 10px 10px; /* Further adjust padding */
-    height: 100px; /* Further reduce height */
+    padding: 8px 15px 10px 10px; 
+    height: 100px;
   }
 
   .title {
-    font-size: 14px; /* Further reduce font size */
+    font-size: 14px; 
     overflow: hidden;
   }
 
   .vote {
-    width: 30px; /* Further reduce width */
-    height: 30px; /* Further reduce height */
-    font-size: 10px; /* Further reduce font size */
-    left: 6px; /* Adjust position */
-    top: -10px; /* Adjust position */
+    width: 30px; 
+    height: 30px;
+    font-size: 10px;
+    left: 6px;
+    top: -10px;
   }
 }
