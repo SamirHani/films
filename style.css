@@ -28,9 +28,6 @@ header {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-header .links {
-  margin-left: 700px;
-}
 .links span {
   padding: 10px;
   display: inline-block;
@@ -49,7 +46,6 @@ h1 {
 }
 
 header .links {
-  margin-left: 700px;
   display: flex; /* Ensure links are displayed horizontally */
   gap: 10px; /* Add spacing between links */
 }
@@ -197,9 +193,6 @@ img {
 
 /* Responsive styles */
 @media (max-width: 768px) {
-  #films {
-    background-color: green;
-  }
   .film {
     width: 150px; /* Smaller width for tablets */
     margin: 5px; /* Adjust margin for tablets */
@@ -229,7 +222,6 @@ img {
     margin-top: 15px;
     padding: 15px;
     justify-content: space-around;
-        background-color: green;
   }
   .film {
     width: 150px; /* Further reduce width for mobile phones */
