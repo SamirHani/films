@@ -209,6 +209,7 @@ img {
 
   .title {
     font-size: 16px; /* Smaller font size */
+    overflow: hidden;
   }
 
   .vote {
@@ -225,7 +226,6 @@ img {
     margin-top: 15px;
     padding: 15px;
     justify-content: space-around;
-
   }
   .film {
     width: 150px; /* Further reduce width for mobile phones */
@@ -239,6 +239,7 @@ img {
 
   .title {
     font-size: 14px; /* Further reduce font size */
+    overflow: hidden;
   }
 
   .vote {
