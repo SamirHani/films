@@ -13,12 +13,13 @@ header {
   background-color: rgb(3, 37, 65);
   width: 100%;
   padding: 10px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  /* position: fixed;
-  z-index: 100; */
+  /* display: flex; */
+  /* justify-content: space-around; */
+  /* align-items: center; */
+  position: relative;
+  /* z-index: 100; */
   color: white;
+  height: 60px;
 }
 
 /* h1 {
@@ -43,11 +44,16 @@ h1 {
   background: linear-gradient(45deg, #d3f800, #257db1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  position: absolute;
+  left: 30px;
+  top: 10px;
 }
 
 header .links {
   display: flex; /* Ensure links are displayed horizontally */
   gap: 10px; /* Add spacing between links */
+  position: absolute;
+  right: 30px;
 }
 
 .links span {
@@ -73,13 +79,18 @@ header .links {
 }
 
 @media (max-width: 480px) {
+
   h1 {
     font-size: 24px; /* Further reduce font size for very small screens */
+    left: 10px
   }
-
+  header .links {
+    gap: 3px;
+  }
   .links span {
     font-size: 12px; /* Further reduce font size of links */
-    padding: 6px; /* Adjust padding for very small screens */
+    padding: 5px; /* Adjust padding for very small screens */
+    right: 10px;
   }
 }
 /*________________________________________________________________________________*/
