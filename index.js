@@ -1,10 +1,30 @@
 let filmsdiv = document.getElementById('films');
+let topRatedButton = document.getElementById('topRated');
+let popularButton = document.getElementById('popular');
+let nowPlayingButton = document.getElementById('now');
+let upCommingButton = document.getElementById('upComming');
+let links = document.querySelectorAll('span');
+
+console.log(links);
+const apiKey = '0da49e67f2b187350af65b0d605eeee1';
+const topRated = `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`;
+const popular = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`;
+const nowPlaying = `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}`;
+const upComming = `https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}`;
+
+showSelected(topRated, topRatedButton);
+function showSelected(url, button) {
+  filmsdiv.innerHTML = '';
+
+  // make the button color active
+  links.forEach((link) => {
+    link.className = 'notActive';
+    console.log(link)
+  });
+  button.className = 'active';
+  console.log(url);
   let xhr = new XMLHttpRequest();
-  const apiKey = '0da49e67f2b187350af65b0d605eeee1';
-  const url = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`;
-
   xhr.open('GET', url, true);
-
   xhr.onload = function () {
     if (xhr.status === 200) {
       console.log('Success');
@@ -19,8 +39,8 @@ let filmsdiv = document.getElementById('films');
         let divtitle = document.createElement('div');
         let divvote = document.createElement('div');
         let img = document.createElement('img');
-        let img_div = document.createElement('div')
-        let text = document.createElement('div')
+        let img_div = document.createElement('div');
+        let text = document.createElement('div');
 
         // puting our data in a variable
         let title = document.createTextNode(film.title);
@@ -34,7 +54,7 @@ let filmsdiv = document.getElementById('films');
         divtitle.className = 'title';
         divvote.className = 'vote';
         img_div.className = 'poster';
-        text.className= "text"
+        text.className = 'text';
 
         img.src = `https://image.tmdb.org/t/p/w500${poster}`;
 
@@ -43,10 +63,10 @@ let filmsdiv = document.getElementById('films');
         divtitle.appendChild(title);
         img_div.appendChild(img);
         divfilm.appendChild(img_div);
-        
+
         text.appendChild(divtitle);
         text.appendChild(divvote);
-        divfilm.appendChild(text)
+        divfilm.appendChild(text);
         filmsdiv.appendChild(divfilm);
       });
     } else {
@@ -56,4 +76,17 @@ let filmsdiv = document.getElementById('films');
   };
 
   xhr.send();
+}
 
+topRatedButton.addEventListener('click', () =>
+  showSelected(topRated, topRatedButton)
+);
+popularButton.addEventListener('click', () =>
+  showSelected(popular, popularButton)
+);
+upCommingButton.addEventListener('click', () =>
+  showSelected(upComming, upCommingButton)
+);
+nowPlayingButton.addEventListener('click', () =>
+  showSelected(nowPlaying, nowPlayingButton)
+);

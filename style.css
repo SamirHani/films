@@ -19,7 +19,7 @@ header, footer {
   align-items: center;
 }
 h1 {
-  font-size: 40px;
+  font-size: 50px;
   margin-left: 10px;
   background: linear-gradient(45deg, #d3f800, #257db1);
   -webkit-background-clip: text;
@@ -38,6 +38,7 @@ header .links {
 .links span {
   padding: 10px;
   color: rgb(255, 255, 255);
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -110,8 +111,8 @@ img {
   font-size: 18px;
 }
 
-.title:hover {
-  color: rgb(16, 147, 199);
+.title:hover , .links span:hover , .active{
+  color: rgb(16, 147, 199) !important;
 }
 
 .vote {
@@ -198,4 +199,7 @@ footer span {
   font-weight: bold;
   display: inline-block;
   padding: 10px;
+}
+.notActive {
+  color: white;
 }
