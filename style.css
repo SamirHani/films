@@ -77,7 +77,7 @@ header .links {
   display: flex;
   justify-content: center;
   margin-top: 70px;
-  row-gap: 0px;
+  min-height: calc(100vh - 160px);
 }
 
 img {
