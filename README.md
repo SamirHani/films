@@ -5,7 +5,3 @@
 - [x] showing them in a good ui and accessibility friendly
 
 > [!note] The website is repsponsive to all screens
-
-| Syntax | Description |
-|--------|-------------|
-| Header | Title       |  
